@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+import 'firebase/auth';
 
 //These are configurations from the Firebase project
 const firebaseConfig = {
