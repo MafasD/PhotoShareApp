@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 //These are configurations from the Firebase project
 const firebaseConfig = {
@@ -11,7 +12,9 @@ const firebaseConfig = {
     appId: '1:68556638110:android:8175e7b6c7bcc5de13f88f',
   };
 
-//Initializing Firebase
+//Initializing Firebase, so this app will be connected to the Firebase project.
 const firebaseApp = initializeApp(firebaseConfig);
+//Initializing Firestore, so this app will be connected to the Firestore database of the Firebase project.
+const firestoreDB = getFirestore(firebaseApp);
 
-export default firebaseApp;
+export { firebaseApp, firestoreDB };

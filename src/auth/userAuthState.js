@@ -2,11 +2,11 @@
 import auth from '@react-native-firebase/auth';
 import { useEffect, useState } from 'react';
 
-const useAuthState = () => {
-  //Initializing a state variable 'user' with the initial value of null, meaning logged out
+const userAuthState = () => {
+  //Initializing a state variable 'user' with the initial value of null (logged out)
   const [user, setUser] = useState(null);
 
-   //Subscribing to authentication state changes (login/logout)
+  //Subscribing to authentication state changes (login/logout)
   useEffect(() => {
     const unsubscribe = auth().onAuthStateChanged((authUser) => {
       //When the authentication state changes, this callback function is executed
@@ -26,4 +26,4 @@ const useAuthState = () => {
   return user;
 };
 
-export default useAuthState;
+export default userAuthState;
