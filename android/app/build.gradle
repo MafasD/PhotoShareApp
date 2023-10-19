@@ -107,6 +107,7 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+    implementation project(':react-native-reanimated')
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:32.2.3')
     // TODO: Add the dependencies for Firebase products you want to use
